@@ -85,6 +85,7 @@ public class TLCPServer {
         SSLServerSocket svrSocket = (SSLServerSocket) serverFactory.createServerSocket(38636);
         svrSocket.setEnabledCipherSuites(ciphers);
 
+        System.out.println("org.conscrypt.useEngineSocketByDefault: "+System.getProperty("org.conscrypt.useEngineSocketByDefault"));
         System.out.println("Server SSL context init success...");
 
         while (true){
